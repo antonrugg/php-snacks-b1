@@ -1,13 +1,7 @@
 <!-- 
-Snack 1
-Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. 
-Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite.
-Stampiamo a schermo tutte le partite con questo schema.
-Olimpia Milano - Cantù | 55-60
 
-Snack 2
-Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, 
-che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
+
+
 
 Snack 3
 Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
@@ -63,6 +57,11 @@ Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliora
 <h1>PHP SNACKS BLOCCO 1</h1>
 
 <h2>Snack 1</h2>
+<!-- Snack 1
+Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. 
+Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite.
+Stampiamo a schermo tutte le partite con questo schema.
+Olimpia Milano - Cantù | 55-60 -->
 <?php
 
 //Olimpia Milano - Cantù | 55-60
@@ -79,7 +78,39 @@ Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliora
 
 
 <h2>Snack 2</h2>
+<!-- Snack 2
+Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
+che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero.
+Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 <?php
-    
+    // $user = [
+    //     "name" => "antonio",
+    //     "mail" => "example.example@lol.com",
+    //     "age" => 28
+    // ];
+
+    $name = '';
+    $mail = '';
+    $age = '';
+
+    if (isset($_GET["name"], $_GET["mail"], $_GET["age"])) {
+        $name = $_GET["name"];
+        $mail = $_GET["mail"];
+        $age = $_GET["age"];
+
+        if( 
+            strlen($name) > 3 &&
+            strpos($mail, '.') && 
+            strpos($mail, '@') &&
+            is_numeric($age)
+          ){
+                echo('<p>Accesso riuscito</p>');
+            } else {
+                echo('<p>Accesso negato</p>');
+            }
+
+    }
+
+
 ?>
 

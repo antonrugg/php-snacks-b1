@@ -9,9 +9,7 @@
 
 
 
-Snack Bonus
-Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.
-Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliorare il codice PHP con controlli sui dati -->
+ -->
 
 
 
@@ -155,4 +153,38 @@ Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo par
 
     
 ?>
+
+<h2>Snack Bonus</h2>
+<!-- Snack Bonus
+Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici.
+Stampare Nome, Cognome e la media dei voti di ogni alunno.
+Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliorare il codice PHP con controlli sui dati -->
+<?php 
+//data
+    $class = [
+        [
+            "nome" => "Antonio",
+            "cognome" => "Ruggiero",
+            "voti" => [5, 7, 10, 3, 5, 6]
+        ],
+        [
+            "nome" => "Rene",
+            "cognome" => "Ferretti",
+            "voti" => [3, 2, 9, 5, 5, 4]
+        ],
+        [
+            "nome" => "Duccio",
+            "cognome" => "Patane",
+            "voti" => [7, 3, 3, 3, 4, 8]
+        ],
+        [
+            "nome" => "Totti",
+            "cognome" => "Biascica",
+            "voti" => [5, 2, 3, 4, 3, 2]
+        ],
+    ];
+?>
+
+
+
 

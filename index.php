@@ -6,8 +6,7 @@
 
 
 
-Snack 4
-Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.
+
 
 
 Snack Bonus
@@ -129,5 +128,31 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
    }
 
    var_dump($randomNumbers);
+?>
+
+<h2>Snack 4</h2>
+<!-- Snack 4
+Prendere un paragrafo abbastanza lungo, contenente diverse frasi.
+Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
+
+<?php
+    $quote = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Harum laudantium quisquam.
+              Dolores aspernatur illum esse repellat ratione ipsum voluptatibus rem dolorem tempore accusamus blanditiis nihil provident.
+              Recusandae magnam.
+              Non facilis.';
+
+   $findMe = '.';
+
+   $subQuotes = explode($findMe , $quote);
+
+   for ($i=0; $i < count($subQuotes); $i++) { 
+       echo('<p>');
+       echo($subQuotes[$i]);
+       echo('.</p>');
+
+   }
+
+    
 ?>
 

@@ -186,9 +186,16 @@ Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliora
 ?>
 
 <?php
+
+    
+
     for ($i=0; $i < count($class); $i++){
+        $voti = $class[$i]["voti"];
+        $sommaVoti = array_sum($voti);
+        $mediaVoti = round($sommaVoti / count($voti));
+
         echo('<p>');
-        echo($class[$i]["nome"] . ' ' . $class[$i]["cognome"]);
+        echo($class[$i]["nome"] . ' ' . $class[$i]["cognome"] . ' | ' . ' Media voti: ' . $mediaVoti);
         echo('</p>');
     }
 ?>

@@ -147,7 +147,7 @@ Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo par
    for ($i=0; $i < count($subQuotes); $i++) { 
        echo('<p>');
        echo($subQuotes[$i]);
-       echo('.</p>');
+       echo('</p>');
 
    }
 
@@ -195,7 +195,7 @@ Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliora
         $mediaVoti = round($sommaVoti / count($voti));
 
         echo('<p>');
-        echo($class[$i]["nome"] . ' ' . $class[$i]["cognome"] . ' | ' . ' Media voti: ' . $mediaVoti);
+        echo($class[$i]["nome"] . ' ' . $class[$i]["cognome"] . ' | Media voti: ' . $mediaVoti);
         echo('</p>');
     }
 ?>

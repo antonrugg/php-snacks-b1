@@ -185,6 +185,14 @@ Se concludete e vi avanza tempo potete curare maggiormente la UI oppure migliora
     ];
 ?>
 
+<?php
+    for ($i=0; $i < count($class); $i++){
+        echo('<p>');
+        echo($class[$i]["nome"] . ' ' . $class[$i]["cognome"]);
+        echo('</p>');
+    }
+?>
+
 
 
 

@@ -3,8 +3,7 @@
 
 
 
-Snack 3
-Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
+
 
 
 Snack 4
@@ -112,5 +111,23 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
     }
 
 
+?>
+
+<h2>Snack 3</h2>
+ <!-- Snack 3
+Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta -->
+
+<?php
+   $randomNumbers = [];
+
+   while (count($randomNumbers) < 15) {
+       $number = rand(0, 30);
+
+       if(!in_array($number, $randomNumbers)){
+           $randomNumbers[] = $number;
+       }
+   }
+
+   var_dump($randomNumbers);
 ?>
 
